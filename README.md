@@ -46,9 +46,11 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Esteban Real, Alok Aggarwal, Yanping Huang, Quoc V Le. *Arxiv 1802*
 - NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search [[pdf]](https://arxiv.org/abs/1802.01548) [[Official code Pytorch]](https://github.com/ianwhale/nsga-net)
   - Zhichao Lu, Ian Whalen, Vishnu Boddeti, Yashesh Dhebar, Kalyanmoy Deb, Erik Goodman, Wolfgang Banzhaf *Arxiv 1802*
-- Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[Official code Tensorflow]](https://github.com/moremnas/MoreMNAS)
+- Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[Official code Tensorflow(No Training Code)]](https://github.com/moremnas/MoreMNAS)
   - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
-
+- Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Official code Tensorflow(No Training Code)]](https://github.com/falsr/FALSR)
+  - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
+  
 ### Others
 - Neural Architecture Optimization [[pdf]](https://arxiv.org/abs/1808.07233) [[code]](https://github.com/renqianluo/NAO)
   - Renqian Luo, Fei Tian, Tao Qin, Enhong Chen, Tie-Yan Liu. *Arxiv 1808*
@@ -92,7 +94,14 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Max Jaderberg, Valentin Dalibard, Simon Osindero, Wojciech M. Czarnecki, Jeff Donahue, Ali Razavi, Oriol Vinyals, Tim Green, Iain Dunning, Karen Simonyan, Chrisantha Fernando, Koray Kavukcuoglu. *Arxiv 1711*
   
 ## Applications
-### Image Restoration.
+
+### Image Restoration
+#### Super Resolution
+- Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[Official code Tensorflow(No Training Code)]](https://github.com/moremnas/MoreMNAS)
+  - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
+- Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Official code Tensorflow(No Training Code)]](https://github.com/falsr/FALSR)
+  - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
+  
 ### Semantic Image Segmentation 
 - Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation [[pdf]](https://arxiv.org/abs/1901.02985)
   - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
