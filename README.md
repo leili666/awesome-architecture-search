@@ -44,6 +44,8 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Hanxiao Liu, Karen Simonyan, Oriol Vinyals, Chrisantha Fernando, Koray Kavukcuoglu. *ICLR'18*
 - Regularized Evolution for Image Classifier Architecture Search [[pdf]](https://arxiv.org/abs/1802.01548)
   - Esteban Real, Alok Aggarwal, Yanping Huang, Quoc V Le. *Arxiv 1802*
+- NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search
+  - Zhichao Lu, Ian Whalen, Vishnu Boddeti, Yashesh Dhebar, Kalyanmoy Deb, Erik Goodman, Wolfgang Banzhaf [[pdf]](https://arxiv.org/abs/1802.01548) [[Official code Pytorch]](https://github.com/ianwhale/nsga-net)
 
 ### Others
 - Neural Architecture Optimization [[pdf]](https://arxiv.org/abs/1808.07233) [[code]](https://github.com/renqianluo/NAO)
@@ -86,7 +88,12 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Elad Hazan, Adam Klivans, Yang Yuan. *NIPS DLTP Workshop 2017*
 - Population Based Training of Neural Networks [[pdf]](https://arxiv.org/abs/1711.09846)
   - Max Jaderberg, Valentin Dalibard, Simon Osindero, Wojciech M. Czarnecki, Jeff Donahue, Ali Razavi, Oriol Vinyals, Tim Green, Iain Dunning, Karen Simonyan, Chrisantha Fernando, Koray Kavukcuoglu. *Arxiv 1711*
-
+  
+## Applications
+### Image Restoration.
+### Semantic Image Segmentation 
+- Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation [[pdf]](https://arxiv.org/abs/1901.02985)
+  - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
 
 ## Contributing
 <p align="center">
