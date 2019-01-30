@@ -18,11 +18,11 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ## Architecture Search
 
 ### Reinforcement Learning
-- Neural Architecture Search with Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.01578)
+- `Neural Architecture Search with Reinforcement Learning` [[pdf]](https://arxiv.org/abs/1611.01578)[[Implementaion Tensorflow]](https://github.com/titu1994/neural-architecture-search)
   - Barret Zoph and Quoc V. Le. *ICLR'17*
 - Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
-- Efficient Architecture Search by Network Transformation [[pdf]](https://arxiv.org/abs/1707.04873) [[code]](https://github.com/han-cai/EAS)
+- `Efficient Architecture Search by Network Transformation` [[pdf]](https://arxiv.org/abs/1707.04873) [[TF full code]](https://github.com/han-cai/EAS)
   - Han Cai, Tianyao Chen, Weinan Zhang, Yong Yu, Jun Wang. *AAAI'18*
 - Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[nasnet]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
   - Barret Zoph, Vijay Vasudevan, Jonathan Shlens, Quoc V. Le. *Arxiv 1707*
@@ -30,21 +30,23 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
 - A Flexible Approach to Automated RNN Architecture Generation [[pdf]](https://arxiv.org/abs/1712.07316)
   - Martin Schrimpf, Stephen Merity, James Bradbury, Richard Socher. *ICLR'18*
-- Efficient Neural Architecture Search via Parameter Sharing [[pdf]](https://arxiv.org/abs/1802.03268) [[code (not official)]](https://github.com/carpedm20/ENAS-pytorch) [[code (official)]](https://github.com/melodyguan/enas)
+- `Efficient Neural Architecture Search via Parameter Sharing` [[pdf]](https://arxiv.org/abs/1802.03268) [[code (not official)]](https://github.com/carpedm20/ENAS-pytorch) [[code (official)]](https://github.com/melodyguan/enas)
   - Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean. *Arxiv 1802*
-- Path-Level Network Transformation for Efficient Architecture Search [[pdf]](https://arxiv.org/abs/1806.02639) [[code]](https://github.com/han-cai/PathLevel-EAS)
+- `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[TF full code]](https://github.com/han-cai/PathLevel-EAS)
   - Han Cai, Jiacheng Yang, Weinan Zhang, Song Han, Yong Yu. *ICML'18*
+- `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[Implementaion Tensorflow]](https://github.com/wallarm/nascell-automl)
+  - Wallarm
 
 ### Evolutionary Algorithm
 - Large-Scale Evolution of Image Classifiers [[pdf]](https://arxiv.org/abs/1703.01041)
   - Esteban Real, Sherry Moore, Andrew Selle, Saurabh Saxena, Yutaka Leon Suematsu, Jie Tan, Quoc Le, Alex Kurakin. *ICML'17*
-- Genetic CNN [[pdf]](https://arxiv.org/abs/1703.01513) [[code]](https://github.com/aqibsaeed/Genetic-CNN)
+- `Genetic CNN` [[pdf]](https://arxiv.org/abs/1703.01513) [[code]](https://github.com/aqibsaeed/Genetic-CNN)
   - Lingxi Xie and Alan Yuille. *ICCV'17*
 - Hierarchical Representations for Efficient Architecture Search [[pdf]](https://arxiv.org/abs/1711.00436)
   - Hanxiao Liu, Karen Simonyan, Oriol Vinyals, Chrisantha Fernando, Koray Kavukcuoglu. *ICLR'18*
 - Regularized Evolution for Image Classifier Architecture Search [[pdf]](https://arxiv.org/abs/1802.01548)
   - Esteban Real, Alok Aggarwal, Yanping Huang, Quoc V Le. *Arxiv 1802*
-- NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search [[pdf]](https://arxiv.org/abs/1802.01548) [[Official code Pytorch]](https://github.com/ianwhale/nsga-net)
+- `NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search` [[pdf]](https://arxiv.org/abs/1802.01548) [[Official code Pytorch]](https://github.com/ianwhale/nsga-net)
   - Zhichao Lu, Ian Whalen, Vishnu Boddeti, Yashesh Dhebar, Kalyanmoy Deb, Erik Goodman, Wolfgang Banzhaf *Arxiv 1802*
 - Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[Official code Tensorflow(No Training Code)]](https://github.com/moremnas/MoreMNAS)
   - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
