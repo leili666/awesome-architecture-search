@@ -22,18 +22,32 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Barret Zoph and Quoc V. Le. *ICLR'17*
 - Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
-- `Efficient Architecture Search by Network Transformation` [[pdf]](https://arxiv.org/abs/1707.04873) [[TF full code]](https://github.com/han-cai/EAS)
-  - Han Cai, Tianyao Chen, Weinan Zhang, Yong Yu, Jun Wang. *AAAI'18*
 - Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
   - Barret Zoph, Vijay Vasudevan, Jonathan Shlens, Quoc V. Le. *Arxiv 1707*
 - Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
 - A Flexible Approach to Automated RNN Architecture Generation [[pdf]](https://arxiv.org/abs/1712.07316)
   - Martin Schrimpf, Stephen Merity, James Bradbury, Richard Socher. *ICLR'18*
+  
+#### Efficient network search by reusing params.
 - `Efficient Neural Architecture Search via Parameter Sharing` [[pdf]](https://arxiv.org/abs/1802.03268) [[Pytorch full code (not official)]](https://github.com/carpedm20/ENAS-pytorch) [[TF full code (official)]](https://github.com/melodyguan/enas)
   - Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean. *Arxiv 1802*
+    - Optimal sub-graph and parameter sharing and DAG.
+    - Single GPU and less than 16 hours.
+  
+- `Efficient Architecture Search by Network Transformation` [[pdf]](https://arxiv.org/abs/1707.04873) [[TF full code]](https://github.com/han-cai/EAS)
+  - Han Cai, Tianyao Chen, Weinan Zhang, Yong Yu, Jun Wang. *AAAI'18*
+  - Idea:
+    - Reusing its weights.
+    - Reinforcement learning(grow the network depth or layer width with function-preserving transformations).
+    - Takes around 2 days on 5 GPUs(360 hours).
+    - Test error 4.23 and 23.4M params.
 - `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[TF full code]](https://github.com/han-cai/PathLevel-EAS)
   - Han Cai, Jiacheng Yang, Weinan Zhang, Song Han, Yong Yu. *ICML'18*
+    - Enable the meta-controller to modify the path topology while keeping the merits of reusing weights.
+    - Allow efficiently designing effective structures with complex path topologies.
+    - Learning CNN cells on CIFAR-10 about 200 GPU-hours
+    - 2.30 test error and 14.3M params.
 - `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[TF full code]](https://github.com/wallarm/nascell-automl)
   - Wallarm
 
