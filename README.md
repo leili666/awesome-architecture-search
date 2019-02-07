@@ -74,10 +74,17 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ### Others
 - Neural Architecture Optimization [[pdf]](https://arxiv.org/abs/1808.07233) [[TF&Pytorch full code]](https://github.com/renqianluo/NAO)
   - Renqian Luo, Fei Tian, Tao Qin, Enhong Chen, Tie-Yan Liu. *Arxiv 1808*
+    -  Based on continuous optimization.
+      -  (1) An encoder embeds/maps neural network architectures into a continuous space. 
+      - (2) A predictor takes the continuous representation of a network as input and predicts its accuracy. 
+      - (3) A decoder maps a continuous representation of a network back to its architecture.
 - DeepArchitect: Automatically Designing and Training Deep Architectures [[pdf]](https://arxiv.org/abs/1704.08792) [[TF full code]](https://github.com/negrinho/deep_architect)
   - Renato Negrinho and Geoff Gordon. *Arxiv 1704*
+    - Tree-structure representation.
+    - Search methods: Monte Carlo tree search (MCTS), and sequential model-based optimization (SMBO).
 - SMASH: One-Shot Model Architecture Search through HyperNetworks [[pdf]](https://arxiv.org/abs/1708.05344) [[Pytorch full code]](https://github.com/ajbrock/SMASH)
   - Andrew Brock, Theodore Lim, J.M. Ritchie, Nick Weston. *ICLR'18*
+    - Learning an auxiliary HyperNet that generates the weights of a main model conditioned on that model's architecture. 
 - Simple and efficient architecture search for Convolutional Neural Networks [[pdf]](https://arxiv.org/abs/1711.04528)
   - Thomas Elsken, Jan-Hendrik Metzen, Frank Hutter. *ICLR'18 Workshop*
 - Progressive Neural Architecture Search [[pdf]](https://arxiv.org/abs/1712.00559)
