@@ -18,8 +18,14 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ## Architecture Search
 
 ### Reinforcement Learning
-- `Neural Architecture Search with Reinforcement Learning` [[pdf]](https://arxiv.org/abs/1611.01578)[[TF full code]](https://github.com/titu1994/neural-architecture-search)
+- `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[TF full code]](https://github.com/wallarm/nascell-automl)
+  - Wallarm
+- `Neural Architecture Search with Reinforcement Learning` [[pdf]](https://arxiv.org/abs/1611.01578)[[TF full code follow the above blog.]](https://github.com/titu1994/neural-architecture-search)
   - Barret Zoph and Quoc V. Le. *ICLR'17*
+    - First using Reinforcement Learning with policy gradient to address non-differentiable problem.
+    - Using RNN to describe CNN models(vairable-length and adding more complex architectures(skip-connectionss and BN layers)).
+    - Parallelism and Asynchronouis Update with parameter server and controller replica and child replicas.
+    - 800 gpus 21-28 days and sample 12800 architectures and 3.64 error rate and 37.4M params.
 - Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
 - Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
@@ -48,8 +54,6 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - Allow efficiently designing effective structures with complex path topologies.
     - Learning CNN cells on CIFAR-10 about 200 GPU-hours
     - 2.30 test error and 14.3M params.
-- `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[TF full code]](https://github.com/wallarm/nascell-automl)
-  - Wallarm
 
 ### Evolutionary Algorithm
 - Large-Scale Evolution of Image Classifiers [[pdf]](https://arxiv.org/abs/1703.01041)
@@ -86,6 +90,8 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Jayanta K Dutta, Jiayi Liu, Unmesh Kurup, Mohak Shah. *Arxiv 1801*
 - DARTS: Differentiable Architecture Search [[pdf]](https://arxiv.org/abs/1806.09055) [[Pytorch full code]](https://github.com/quark0/darts)
   - Hanxiao Liu, Karen Simonyan, Yiming Yang. *Arxiv 1806*
+    - **Continuous relaxation** of the architecture representation.
+    - Allowing efficient search of the architecture using **gradient descent**.
 - Efficient Neural Architecture Search with Network Morphism [[pdf]](https://arxiv.org/abs/1806.10282) [[Framework code]](https://github.com/jhfjhfj1/autokeras)
   - Haifeng Jin, Qingquan Song, Xia Hu. *Arxiv 1806*
 - Searching for Efficient Multi-Scale Architectures for Dense Image Prediction [[pdf]](https://arxiv.org/abs/1809.04184) 
