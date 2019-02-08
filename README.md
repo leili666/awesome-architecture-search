@@ -22,14 +22,21 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Wallarm
 - `Neural Architecture Search with Reinforcement Learning` [[pdf]](https://arxiv.org/abs/1611.01578)[[TF full code follow the above blog.]](https://github.com/titu1994/neural-architecture-search)
   - Barret Zoph and Quoc V. Le. *ICLR'17*
-    - First using Reinforcement Learning with policy gradient to address non-differentiable problem.
-    - Using RNN to describe CNN models(vairable-length and adding more complex architectures(skip-connectionss and BN layers)).
-    - Parallelism and Asynchronouis Update with parameter server and controller replica and child replicas.
+    - First using **Reinforcement Learning with policy gradient** to address non-differentiable problem.
+    - **Using RNN** to describe CNN models(vairable-length and adding more complex architectures(skip-connectionss and BN layers)).
+    - **Parallelism and Asynchronouis Update** with parameter server and controller replica and child replicas.
     - 800 gpus 21-28 days and sample 12800 architectures and 3.64 error rate and 37.4M params.
-- Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
-  - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
 - Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
   - Barret Zoph, Vijay Vasudevan, Jonathan Shlens, Quoc V. Le. *Arxiv 1707*
+    - Using cell blocks.
+      - Transfer to more complex dataset.
+      - Add generalization of model.
+      - Faster search speed.
+      - Produce a family of NASNets to fit different situation.
+    - 500 gpus 4 days(48000 gpu hours).
+    - 2.4(CIFAR 10), 82.7(top-1)+96.2(top-5) 88.9M params 23.88B flops ImageNet. 
+- Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
+  - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
 - Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
 - A Flexible Approach to Automated RNN Architecture Generation [[pdf]](https://arxiv.org/abs/1712.07316)
