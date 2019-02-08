@@ -10,12 +10,25 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ## Table of Contents
 
 - [Architecture Search](#architecture-search)
+  - [Survey](#survey)
   - [Reinforcement Learning](#reinforcement-learning)
   - [Evolutionary Algorithm](#evolutionary-algorithm)
   - [Others](#others)
 - [Hyper-parameter Search](#hyper-parameter-search)
 
 ## Architecture Search
+
+### Survey
+- Neural Architecture Search: A Survey [[pdf]](https://arxiv.org/abs/1808.05377)
+  - Thomas Elsken, Jan Hendrik Metzen, Frank Hutter. *Arxiv 1805*
+  - categorize them according to three dimensions: 
+    1. Search space
+    1. Search strategy
+    1. Performance estimation strategy.
+    
+- A Review of Meta-Reinforcement Learning for Deep Neural Networks Architecture Search [[pdf]](https://arxiv.org/abs/1812.07995)
+  - Yesmina Jaafra, Jean Luc Laurent, Aline Deruyver, Mohamed Saber Naceur. *Arxiv 1812*
+  - Reviewing and discussing the current progress in automating CNN architecture search.
 
 ### Reinforcement Learning
 - `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[TF full code]](https://github.com/wallarm/nascell-automl)
@@ -91,9 +104,12 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 - Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[TF net code]](https://github.com/moremnas/MoreMNAS)
   - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
     - Using good virtues from both EA and RL.
-    - Defeat VDSR(2016) method.
+    - Defeat VDSR(**2016**) method.
 - Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Tf net code]](https://github.com/falsr/FALSR)
   - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
+    - Elastic search tactic at both micro and macro level.
+    - A hybrid controller that profits from evolutionary computation and reinforcement learning.
+    - Defeat CARN(**2018**).
   
 ### Others
 - Neural Architecture Optimization [[pdf]](https://arxiv.org/abs/1808.07233) [[TF&Pytorch full code]](https://github.com/renqianluo/NAO)
