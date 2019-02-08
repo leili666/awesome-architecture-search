@@ -28,11 +28,10 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - 800 gpus 21-28 days and sample 12800 architectures and 3.64 error rate and 37.4M params.
 - Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
   - Barret Zoph, Vijay Vasudevan, Jonathan Shlens, Quoc V. Le. *Arxiv 1707*
-    - Using cell blocks.
-      - Transfer to more complex dataset.
-      - Add generalization of model.
-      - Faster search speed.
-      - Produce a family of NASNets to fit different situation.
+    - Using cell blocks(Repeated motifs in architecture engineering networks.).
+      - Generalization of cells transfer to more complex dataset or other complex problems.
+      - Faster search speed as only searching for cell blocks.
+      - Manaully stacking cells to produce a family of NASNets to fit different situation.
     - 500 gpus 4 days(48000 gpu hours).
     - 2.4(CIFAR 10), 82.7(top-1)+96.2(top-5) 88.9M params 23.88B flops ImageNet. 
 - Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
