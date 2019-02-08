@@ -26,7 +26,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - **Using RNN** to describe CNN models(vairable-length and adding more complex architectures(skip-connectionss and BN layers)).
     - **Parallelism and Asynchronouis Update** with parameter server and controller replica and child replicas.
     - 800 gpus 21-28 days and sample 12800 architectures and 3.64 error rate and 37.4M params.
-- Learning Transferable Architectures for Scalable Image Recognition [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
+- Learning Transferable Architectures for Scalable Image Recognition(NASNet) [[pdf]](https://arxiv.org/abs/1707.07012) [[TF net code]](https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet)
   - Barret Zoph, Vijay Vasudevan, Jonathan Shlens, Quoc V. Le. *Arxiv 1707*
     - Using cell blocks(Repeated motifs in architecture engineering networks.).
       - Generalization of cells transfer to more complex dataset or other complex problems.
@@ -34,7 +34,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
       - Manaully stacking cells to produce a family of NASNets to fit different situation.
     - 500 gpus 4 days(48000 gpu hours).
     - 2.4(CIFAR 10), 82.7(top-1)+96.2(top-5) 88.9M params 23.88B flops ImageNet. 
-- Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
+- Designing Neural Network Architectures Using Reinforcement Learning(MetaQNN) [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
 - Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
@@ -64,16 +64,34 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ### Evolutionary Algorithm
 - Large-Scale Evolution of Image Classifiers [[pdf]](https://arxiv.org/abs/1703.01041)
   - Esteban Real, Sherry Moore, Andrew Selle, Saurabh Saxena, Yutaka Leon Suematsu, Jie Tan, Quoc Le, Alex Kurakin. *ICML'17*
+    - Employ **evolutionary algorithms**.
+    - Use novel and intuitive mutation operators.
 - `Genetic CNN` [[pdf]](https://arxiv.org/abs/1703.01513) [[TF full code]](https://github.com/aqibsaeed/Genetic-CNN)
   - Lingxi Xie and Alan Yuille. *ICCV'17*
+    - Adopt the **genetic algorithm** to efficiently traverse this large search space.
+    - First propose an **encoding method** to represent each network structure in a **fixed-length binary string**.
+    - Define standard genetic operations, e.g., selection, mutation and crossover.
 - Hierarchical Representations for Efficient Architecture Search [[pdf]](https://arxiv.org/abs/1711.00436)
   - Hanxiao Liu, Karen Simonyan, Oriol Vinyals, Chrisantha Fernando, Koray Kavukcuoglu. *ICLR'18*
-- Regularized Evolution for Image Classifier Architecture Search [[pdf]](https://arxiv.org/abs/1802.01548)
+    - Novel hierarchical genetic representation scheme(imitates the modularized design pattern commonly adopted by human experts).
+    - Expressive search space(supports complex topologies).
+- Regularized Evolution for Image Classifier Architecture Search(AmoebaNet-A) [[pdf]](https://arxiv.org/abs/1802.01548)
   - Esteban Real, Alok Aggarwal, Yanping Huang, Quoc V Le. *Arxiv 1802*
-- `NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search` [[pdf]](https://arxiv.org/abs/1802.01548) [[Pytorch full code]](https://github.com/ianwhale/nsga-net)
+  - **First** surpasses hand-designs networks.
+    - Modify the tournament selection evolutionary algorithm(introducing an age property).
+    - Compare between random search, reinforce learning(RL) and Evolution algorithm. 
+- `NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search` [[pdf]](https://arxiv.org/abs/1802.01548) [[**Pytorch full code**]](https://github.com/ianwhale/nsga-net)
   - Zhichao Lu, Ian Whalen, Vishnu Boddeti, Yashesh Dhebar, Kalyanmoy Deb, Erik Goodman, Wolfgang Banzhaf *Arxiv 1802*
+    - Multiple objects.
+    - Efficient exploration(crossover and mutation) and exploitation(selection).      
+- Efficient Multi-objective Neural Architecture Search via Lamarckian Evolution [[[pdf]](https://arxiv.org/abs/1804.09081)
+  - Thomas Elsken, Jan Hendrik Metzen, Frank Hutter. *Arxiv 1804*
+    - Multi-objective architecture.
+    - Lamarckian inheritance mechanism(using (approximate) network morphism operators for generating children and warmstarted from parents network.)
 - Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[TF net code]](https://github.com/moremnas/MoreMNAS)
   - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
+    - Using good virtues from both EA and RL.
+    - Defeat VDSR(2016) method.
 - Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Tf net code]](https://github.com/falsr/FALSR)
   - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
   
