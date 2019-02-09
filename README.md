@@ -8,13 +8,29 @@ A curated list of awesome architecture search and hyper-parameter optimization r
 Hyper-parameter optimization has always been a popular field in the Machine Learning community, architecture search just emerges as a rising star in recent years. These are some of the awesome resources!
 
 ## Table of Contents
-
+- [AutoML Book]
 - [Architecture Search](#architecture-search)
   - [Survey](#survey)
   - [Reinforcement Learning](#reinforcement-learning)
   - [Evolutionary Algorithm](#evolutionary-algorithm)
   - [Others](#others)
 - [Hyper-parameter Search](#hyper-parameter-search)
+- [Applications](#applications)
+
+## Book
+- AUTOML: METHODS, SYSTEMS, CHALLENGES (NEW BOOK) [[Site]](https://www.automl.org/book/)
+  - Editors: Frank Hutter, Lars Kotthoff, Joaquin Vanschoren *Springer 2019*
+    1. AutoML Methods
+    1. AutoML Systems
+    1. AutoML Challenges
+    
+## Meta Learning
+### Survey
+- Meta-Learning: A Survey [[[pdf]](https://arxiv.org/abs/1810.03548)
+  - Joaquin Vanschoren *Arxiv 1810*'
+    1. Learning from Model Evaluations.
+    1. Learning from Task Properties.
+    1. Learning from Prior Models.
 
 ## Architecture Search
 
@@ -47,13 +63,20 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
       - Manaully stacking cells to produce a family of NASNets to fit different situation.
     - 500 gpus 4 days(48000 gpu hours).
     - 2.4(CIFAR 10), 82.7(top-1)+96.2(top-5) 88.9M params 23.88B flops ImageNet. 
-- Designing Neural Network Architectures Using Reinforcement Learning(MetaQNN) [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
+- MetaQNN Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
-- Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
+    - Use Q-learning with an ϵ-greedy exploration strategy and experience replay.
+- BlockQNN Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
+    - Use Q-Learning paradigm with epsilon-greedy exploration strategy.
+    - Find the optimal network block(strong generalizability and tremendous reduction of the search space).
+    - Stack the block to construct the whole auto-generated network.
+    - Distributed asynchronous framework and an early stop strategy.
 - A Flexible Approach to Automated RNN Architecture Generation [[pdf]](https://arxiv.org/abs/1712.07316)
   - Martin Schrimpf, Stephen Merity, James Bradbury, Richard Socher. *ICLR'18*
-  
+    - Domain-specific language (DSL) produce novel RNNs of arbitrary depth and width.
+    - Allow standard RNN(GRU & LSTM) and non-standard RNN components.
+    - Random search with a ranking function and reinforcement learning.
 #### Efficient network search by reusing params.
 - `Efficient Neural Architecture Search via Parameter Sharing` [[pdf]](https://arxiv.org/abs/1802.03268) [[Pytorch full code (not official)]](https://github.com/carpedm20/ENAS-pytorch) [[TF full code (official)]](https://github.com/melodyguan/enas)
   - Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean. *Arxiv 1802*
@@ -67,6 +90,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - Reinforcement learning(grow the network depth or layer width with function-preserving transformations).
     - Takes around 2 days on 5 GPUs(360 hours).
     - Test error 4.23 and 23.4M params.
+    
 - `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[TF full code]](https://github.com/han-cai/PathLevel-EAS)
   - Han Cai, Jiacheng Yang, Weinan Zhang, Song Han, Yong Yu. *ICML'18*
     - Enable the meta-controller to modify the path topology while keeping the merits of reusing weights.
