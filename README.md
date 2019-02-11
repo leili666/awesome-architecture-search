@@ -65,10 +65,10 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - 2.4(CIFAR 10), 82.7(top-1)+96.2(top-5) 88.9M params 23.88B flops ImageNet. 
 - MetaQNN Designing Neural Network Architectures Using Reinforcement Learning [[pdf]](https://arxiv.org/abs/1611.02167) [[Caffe full code]](https://github.com/bowenbaker/metaqnn)
   - Bowen Baker, Otkrist Gupta, Nikhil Naik, Ramesh Raskar. *ICLR'17*
-    - Use Q-learning with an ϵ-greedy exploration strategy and experience replay.
+    - Use **Q-learning** with an ϵ-greedy exploration strategy and experience replay.
 - BlockQNN Practical Network Blocks Design with Q-Learning [[pdf]](https://arxiv.org/abs/1708.05552)
   - Zhao Zhong, Junjie Yan, Cheng-Lin Liu. *CVPR'18*
-    - Use Q-Learning paradigm with epsilon-greedy exploration strategy.
+    - Use **Q-Learning** paradigm with epsilon-greedy exploration strategy.
     - Find the optimal network block(strong generalizability and tremendous reduction of the search space).
     - Stack the block to construct the whole auto-generated network.
     - Distributed asynchronous framework and an early stop strategy.
@@ -76,27 +76,28 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Martin Schrimpf, Stephen Merity, James Bradbury, Richard Socher. *ICLR'18*
     - Domain-specific language (DSL) produce novel RNNs of arbitrary depth and width.
     - Allow standard RNN(GRU & LSTM) and non-standard RNN components.
-    - Random search with a ranking function and reinforcement learning.
-#### Efficient network search by reusing params.
+    - Random search with a ranking function and reinforcement learning.    
 - `Efficient Neural Architecture Search via Parameter Sharing` [[pdf]](https://arxiv.org/abs/1802.03268) [[Pytorch full code (not official)]](https://github.com/carpedm20/ENAS-pytorch) [[TF full code (official)]](https://github.com/melodyguan/enas)
   - Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean. *Arxiv 1802*
     - Optimal sub-graph and parameter sharing and DAG.
-    - Single GPU and less than 16 hours.
-  
+    - Single GPU and less than 16 hours.  
 - `Efficient Architecture Search by Network Transformation` [[pdf]](https://arxiv.org/abs/1707.04873) [[TF full code]](https://github.com/han-cai/EAS)
   - Han Cai, Tianyao Chen, Weinan Zhang, Yong Yu, Jun Wang. *AAAI'18*
   - Idea:
     - Reusing its weights.
     - Reinforcement learning(grow the network depth or layer width with function-preserving transformations).
     - Takes around 2 days on 5 GPUs(360 hours).
-    - Test error 4.23 and 23.4M params.
-    
+    - Test error 4.23 and 23.4M params.    
 - `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[PyTorch full code]](https://github.com/han-cai/PathLevel-EAS)
   - Han Cai, Jiacheng Yang, Weinan Zhang, Song Han, Yong Yu. *ICML'18*
     - Enable the meta-controller to modify the path topology while keeping the merits of reusing weights.
     - Allow efficiently designing effective structures with complex path topologies.
     - Learning CNN cells on CIFAR-10 about 200 GPU-hours
     - 2.30 test error and 14.3M params.
+- AMC: AutoML for Model Compression and Acceleration on Mobile Devices [[pdf]](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf) [[PockeFlow code (not official)]](https://github.com/Tencent/PocketFlow)
+  - Yihui He, Ji Lin, Zhijian Liu, Hanrui Wang, Li-Jia Li, Song Han. *ECCV'18*
+    - Propose AutoML for **Model Compression**.
+    - Reinforcement learning.
 
 ### Evolutionary Algorithm
 - Large-Scale Evolution of Image Classifiers [[pdf]](https://arxiv.org/abs/1703.01041)
@@ -110,38 +111,48 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - Define standard genetic operations, e.g., selection, mutation and crossover.
 - Hierarchical Representations for Efficient Architecture Search [[pdf]](https://arxiv.org/abs/1711.00436)
   - Hanxiao Liu, Karen Simonyan, Oriol Vinyals, Chrisantha Fernando, Koray Kavukcuoglu. *ICLR'18*
-    - Novel hierarchical genetic representation scheme(imitates the modularized design pattern commonly adopted by human experts).
+    - Novel **hierarchical genetic representation** scheme(imitates the modularized design pattern commonly adopted by human experts).
     - Expressive search space(supports complex topologies).
 - Regularized Evolution for Image Classifier Architecture Search(AmoebaNet-A) [[pdf]](https://arxiv.org/abs/1802.01548)
   - Esteban Real, Alok Aggarwal, Yanping Huang, Quoc V Le. *Arxiv 1802*
   - **First** surpasses hand-designs networks.
-    - Modify the tournament selection evolutionary algorithm(introducing an age property).
-    - Compare between random search, reinforce learning(RL) and Evolution algorithm. 
+    - Modify the **tournament selection** evolutionary algorithm(introducing an age property).
+    - **Compare** between random search, reinforce learning(RL) and Evolution algorithm. 
 - `NSGA-NET: A Multi-Objective Genetic Algorithm for Neural Architecture Search` [[pdf]](https://arxiv.org/abs/1802.01548) [[**Pytorch full code**]](https://github.com/ianwhale/nsga-net)
   - Zhichao Lu, Ian Whalen, Vishnu Boddeti, Yashesh Dhebar, Kalyanmoy Deb, Erik Goodman, Wolfgang Banzhaf *Arxiv 1802*
-    - Multiple objects.
-    - Efficient exploration(crossover and mutation) and exploitation(selection).      
+    - **Multiple objects**.
+    - Efficient **exploration**(crossover and mutation) and **exploitation**(selection).      
 - Efficient Multi-objective Neural Architecture Search via Lamarckian Evolution [[[pdf]](https://arxiv.org/abs/1804.09081)
   - Thomas Elsken, Jan Hendrik Metzen, Frank Hutter. *Arxiv 1804*
-    - Multi-objective architecture.
-    - Lamarckian inheritance mechanism(using (approximate) network morphism operators for generating children and warmstarted from parents network.)
+    - **Multi-objective architecture**.
+    - **Lamarckian inheritance mechanism**(using (approximate) network morphism operators for generating children and warmstarted from parents network.)
 - Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[TF net code]](https://github.com/moremnas/MoreMNAS)
   - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
-    - Using good virtues from both EA and RL.
+    - Using good virtues from both **EA and RL**.
     - Defeat VDSR(**2016**) method.
 - Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Tf net code]](https://github.com/falsr/FALSR)
   - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
     - Elastic search tactic at both micro and macro level.
-    - A hybrid controller that profits from evolutionary computation and reinforcement learning.
+    - A hybrid controller that profits from both **EA and RL**.
     - Defeat CARN(**2018**).
   
 ### Others
+#### Gradient Based
 - Neural Architecture Optimization [[pdf]](https://arxiv.org/abs/1808.07233) [[TF&Pytorch full code]](https://github.com/renqianluo/NAO)
   - Renqian Luo, Fei Tian, Tao Qin, Enhong Chen, Tie-Yan Liu. *Arxiv 1808*
     -  Based on **continuous** optimization.
       - (1) An encoder embeds/maps neural network architectures into a continuous space. 
       - (2) A predictor takes the continuous representation of a network as input and predicts its accuracy. 
       - (3) A decoder maps a continuous representation of a network back to its architecture.
+- DARTS: Differentiable Architecture Search [[pdf]](https://arxiv.org/abs/1806.09055) [[Pytorch full code]](https://github.com/quark0/darts)
+  - Hanxiao Liu, Karen Simonyan, Yiming Yang. *Arxiv 1806*
+    - **Continuous relaxation** of the architecture representation.
+    - Allowing efficient search of the architecture using **gradient descent**.
+- Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation [[pdf]](https://arxiv.org/abs/1901.02985)
+  - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
+    - Hierarchical architecture search space.
+    - Continuous relaxation in Darts.    
+#### Search(Random+SMBO+Progressive Search)
 - DeepArchitect: Automatically Designing and Training Deep Architectures [[pdf]](https://arxiv.org/abs/1704.08792) [[TF full code]](https://github.com/negrinho/deep_architect)
   - Renato Negrinho and Geoff Gordon. *Arxiv 1704*
     - Tree-structure representation.
@@ -164,34 +175,46 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - Adopting **progressive search**(PNAS).
     - Employs a **compact** search space inspired by current state-of-the-art mobile CNNs.
     - Optimizing for both **device-related** (e.g., inference time and memory usage) and **device-agnostic** (e.g., accuracy and model size) objectives
+- Effective Building Block Design for Deep Convolutional Neural Networks using Search [[pdf]](https://arxiv.org/abs/1801.08577)
+  - Jayanta K Dutta, Jiayi Liu, Unmesh Kurup, Mohak Shah. *Arxiv 1801*
+    - Searches over a reduced set of state-of-the-art building blocks for CNNs.
+    - Random search.    
+####  Bayesian Optimisation
 - Neural Architecture Search with Bayesian Optimisation and Optimal Transport [[pdf]](https://arxiv.org/abs/1802.07191)
   - Kirthevasan Kandasamy, Willie Neiswanger, Jeff Schneider, Barnabas Poczos, Eric Xing. *Arxiv 1802*
     - Bayesian Optimisation.
     - Develop a distance metric in the space of neural network architectures 
-- Effective Building Block Design for Deep Convolutional Neural Networks using Search [[pdf]](https://arxiv.org/abs/1801.08577)
-  - Jayanta K Dutta, Jiayi Liu, Unmesh Kurup, Mohak Shah. *Arxiv 1801*
-    - Searches over a reduced set of state-of-the-art building blocks for CNNs.
-    - Random search.
-- DARTS: Differentiable Architecture Search [[pdf]](https://arxiv.org/abs/1806.09055) [[Pytorch full code]](https://github.com/quark0/darts)
-  - Hanxiao Liu, Karen Simonyan, Yiming Yang. *Arxiv 1806*
-    - **Continuous relaxation** of the architecture representation.
-    - Allowing efficient search of the architecture using **gradient descent**.
 - Efficient Neural Architecture Search with Network Morphism [[pdf]](https://arxiv.org/abs/1806.10282) [[Framework code]](https://github.com/jhfjhfj1/autokeras)
   - Haifeng Jin, Qingquan Song, Xia Hu. *Arxiv 1806*
     - Bayesian optimization.
     - Network morphism(keeps the functionality of a neural network while changing its neural architecture).
-- Searching for Efficient Multi-Scale Architectures for Dense Image Prediction [[pdf]](https://arxiv.org/abs/1809.04184) 
-  - Liang-Chieh Chen, Maxwell D. Collins, Yukun Zhu, George Papandreou, Barret Zoph, Florian Schroff, Hartwig Adam, Jonathon Shlens. *Arxiv 1809*
-- AMC: AutoML for Model Compression and Acceleration on Mobile Devices [[pdf]](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf) [[PockeFlow code (not official)]](https://github.com/Tencent/PocketFlow)
-  - Yihui He, Ji Lin, Zhijian Liu, Hanrui Wang, Li-Jia Li, Song Han. *ECCV'18*
-    - Propose AutoML for **Model Compression**.
-    - Reinforcement learning.
+#### Unknown
 - MorphNet: Fast & Simple Resource-Constrained Structure Learning of Deep Networks [[pdf]](http://openaccess.thecvf.com/content_cvpr_2018/papers/Gordon_MorphNet_Fast__CVPR_2018_paper.pdf)
   - Ariel Gordon, Elad Eban, Bo Chen, Ofir Nachum, Tien-Ju Yang, Edward Choi. *CVPR'18*
     - Iteratively shrinks and expands a network.
       - Shrinking via a resourceweighted sparsifying regularizer on activations
       - Expanding via a uniform multiplicative factor on all layers.
-
+- Searching for Efficient Multi-Scale Architectures for Dense Image Prediction [[pdf]](https://arxiv.org/abs/1809.04184) 
+  - Liang-Chieh Chen, Maxwell D. Collins, Yukun Zhu, George Papandreou, Barret Zoph, Florian Schroff, Hartwig Adam, Jonathon Shlens. *Arxiv 1809*
+  
+### Applications
+#### Image Restoration
+##### Super Resolution
+- Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[TF net code]](https://github.com/moremnas/MoreMNAS)
+  - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
+- Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Tf net code]](https://github.com/falsr/FALSR)
+  - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*  
+#### Semantic Image Segmentation 
+- Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation [[pdf]](https://arxiv.org/abs/1901.02985)
+  - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
+    - Hierarchical architecture search space.
+    - Continuous relaxation in Darts.
+#### Model Compression
+- AMC: AutoML for Model Compression and Acceleration on Mobile Devices [[pdf]](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf) [[PockeFlow code (not official)]](https://github.com/Tencent/PocketFlow)
+  - Yihui He, Ji Lin, Zhijian Liu, Hanrui Wang, Li-Jia Li, Song Han. *ECCV'18*
+    - Propose AutoML for **Model Compression**.
+    - Reinforcement learning.
+    
 ## Hyper-Parameter Search
 - Speeding up Automatic Hyperparameter Optimization of Deep Neural Networksby Extrapolation of Learning Curves [[pdf]](http://ml.informatik.uni-freiburg.de/papers/15-IJCAI-Extrapolation_of_Learning_Curves.pdf) [[Numpy full code]](https://github.com/automl/pylearningcurvepredictor)
   - Tobias Domhan, Jost Tobias Springenberg, Frank Hutter. *IJCAI'15*
@@ -206,21 +229,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 - Population Based Training of Neural Networks [[pdf]](https://arxiv.org/abs/1711.09846)
   - Max Jaderberg, Valentin Dalibard, Simon Osindero, Wojciech M. Czarnecki, Jeff Donahue, Ali Razavi, Oriol Vinyals, Tim Green, Iain Dunning, Karen Simonyan, Chrisantha Fernando, Koray Kavukcuoglu. *Arxiv 1711*
   
-## Applications
 
-### Image Restoration
-#### Super Resolution
-- Multi-Objective Reinforced Evolution in Mobile Neural Architecture Search(MoreNAS) [[pdf]](https://arxiv.org/abs/1901.01074) [[TF net code]](https://github.com/moremnas/MoreMNAS)
-  - Xiangxiang Chu, Bo Zhang, Ruijun Xu, Hailong Ma  *Arxiv 1901*
-- Fast, Accurate and Lightweight Super-Resolution models [[pdf]](https://arxiv.org/abs/1901.07261) [[Tf net code]](https://github.com/falsr/FALSR)
-  - Xiangxiang Chu, Bo Zhang, Hailong Ma, Ruijun Xu, Jixiang Li, Qingyuan Li *Arxiv 1901*
-  
-### Semantic Image Segmentation 
-- Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation [[pdf]](https://arxiv.org/abs/1901.02985)
-  - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
-    - Hierarchical architecture search space.
-    - Continuous relaxation in Darts.
-    
 ## Contributing
 <p align="center">
   <img src="http://cdn1.sportngin.com/attachments/news_article/7269/5172/needyou_small.jpg" alt="We Need You!">
