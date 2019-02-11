@@ -152,7 +152,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Chenxi Liu, Liang-Chieh Chen, Florian Schroff, Hartwig Adam, Wei Hua, Alan Yuille, Li Fei-Fei. *arXiv:1901*
     - Hierarchical architecture search space.
     - Continuous relaxation in Darts.    
-#### Search(Random+SMBO+Progressive Search)
+#### Search(Random+SMBO+Progressive Search+one-shot architecture search)
 - DeepArchitect: Automatically Designing and Training Deep Architectures [[pdf]](https://arxiv.org/abs/1704.08792) [[TF full code]](https://github.com/negrinho/deep_architect)
   - Renato Negrinho and Geoff Gordon. *Arxiv 1704*
     - Tree-structure representation.
@@ -179,6 +179,10 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
   - Jayanta K Dutta, Jiayi Liu, Unmesh Kurup, Mohak Shah. *Arxiv 1801*
     - Searches over a reduced set of state-of-the-art building blocks for CNNs.
     - Random search.    
+- Understanding and Simplifying One-Shot Architecture Search.
+  - Gabriel Bender, Pieter-Jan Kindermans, Barret Zoph, Vijay Vasudevan, Quoc Le. *ICML'18*
+    - Weight sharing.
+    - One-shot architecture search.
 ####  Bayesian Optimisation
 - Neural Architecture Search with Bayesian Optimisation and Optimal Transport [[pdf]](https://arxiv.org/abs/1802.07191)
   - Kirthevasan Kandasamy, Willie Neiswanger, Jeff Schneider, Barnabas Poczos, Eric Xing. *Arxiv 1802*
