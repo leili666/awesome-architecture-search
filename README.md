@@ -37,14 +37,14 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
 ### Survey
 - Neural Architecture Search: A Survey [[pdf]](https://arxiv.org/abs/1808.05377)
   - Thomas Elsken, Jan Hendrik Metzen, Frank Hutter. *Arxiv 1805*
-  - categorize them according to three dimensions: 
-    1. Search space
-    1. Search strategy
-    1. Performance estimation strategy.
+    - Categorize them according to **three dimensions**: 
+      1. Search space
+      1. Search strategy
+      1. Performance estimation strategy.
     
 - A Review of Meta-Reinforcement Learning for Deep Neural Networks Architecture Search [[pdf]](https://arxiv.org/abs/1812.07995)
   - Yesmina Jaafra, Jean Luc Laurent, Aline Deruyver, Mohamed Saber Naceur. *Arxiv 1812*
-  - Reviewing and discussing the current progress in automating CNN architecture search.
+    - Reviewing and discussing the current progress in automating CNN architecture search.
 
 ### Reinforcement Learning
 - `Simple implementation of Neural Architecture Search with Reinforcement Learning(Blogs)` [[Details]](https://lab.wallarm.com/the-first-step-by-step-guide-for-implementing-neural-architecture-search-with-reinforcement-99ade71b3d28) [[TF full code]](https://github.com/wallarm/nascell-automl)
@@ -91,7 +91,7 @@ Hyper-parameter optimization has always been a popular field in the Machine Lear
     - Takes around 2 days on 5 GPUs(360 hours).
     - Test error 4.23 and 23.4M params.
     
-- `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[TF full code]](https://github.com/han-cai/PathLevel-EAS)
+- `Path-Level Network Transformation for Efficient Architecture Search` [[pdf]](https://arxiv.org/abs/1806.02639) [[PyTorch full code]](https://github.com/han-cai/PathLevel-EAS)
   - Han Cai, Jiacheng Yang, Weinan Zhang, Song Han, Yong Yu. *ICML'18*
     - Enable the meta-controller to modify the path topology while keeping the merits of reusing weights.
     - Allow efficiently designing effective structures with complex path topologies.
